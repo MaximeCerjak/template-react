@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$yellowCer: rgb(248, 179, 50);
+$redCer: rgb(232, 80, 31);
+$blueCer: rgb(24, 160, 150);
+$greyCer: rgb(75, 75, 77);
+$yellow: rgb(255, 255, 0);
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.intro {
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 1.8em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.4em;
+    line-height: 1.1;
+}
+
+.modal {
+    background-color: $greyCer;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: fixed;
+    max-height: 400px;
+    max-width: 600px;
+    overflow: auto;
+    z-index: 5;
+    pointer-events: all;
+}
+
+.modal-content {
+    margin: 0 auto;
+    border: 1px solid #424242;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.mainComponent-container {
+    // display: flex;
+    // flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto 200px auto;
+    padding: 0 1.5em;
+}
+
+.block-galery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    padding: 1.5em;
+    background-color:rgba(255, 255, 255, 0.87);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.component-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 0 1.5em;
+    justify-content: center;
+}
+
+  .component-container > * {
+    margin: 0.5em;
+}
+
+.array-title {
+    text-align: center;
+    margin: 50px auto 25px auto;
+}
+
+.array-container {
+    width : 80%;
+    margin: 0 auto;
+}
+
+.cer-array {
+    background-color : white;
+    width: 80%;
+    max-width: 850px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cer-array th {
+    padding: 1.2em 1em .6em 1em;
+}
+
+.cer-array td {
+    padding: .45em .8em;
+}
+
+.cer-array tr {
+    border-radius: 5px;
+}
+
+.srch-array {
+    background-color : rgb(236, 236, 236);
+    border-radius : 3px;
+}

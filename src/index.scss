@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$yellowCer: rgb(248, 179, 50);
+$redCer: rgb(232, 80, 31);
+$blueCer: rgb(24, 160, 150);
+$greyCer: rgb(75, 75, 77);
+$yellow: rgb(255, 255, 0);
+
+@layer components {
+	.primaryBtn-cerfrance {
+		@apply py-2 px-4 ml-2 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-900 focus:border-teal-900;
+		background-color: $blueCer;
+		font-size: 1rem;
+	}
+	.groupBtn-item {
+		@apply relative inline-flex border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500;
+	}
+	.select-input {
+		@apply shadow-sm focus:ring-teal-500 focus:border-teal-500 block w-full sm:text-sm border-gray-300 rounded-md;
+		max-width: 200px;
+		min-width: 200px;
+		color: #454657;
+	}
+	.classic-input {
+		@apply block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 sm:text-sm;
+	}
+	.roundedBtn-cerfrance {
+		@apply inline-flex items-center px-3.5 py-2 m-2 w-28 border h-8 border-transparent text-xs justify-center leading-4 font-medium rounded-full shadow-sm text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-900;
+		background-color: $blueCer;
+	}
+	.small-badge {
+		@apply rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-500;
+	}
+	.label-input {
+		@apply block text-sm font-medium text-gray-700;
+	}
+	// bouton de validation couleur blueCer
+	.btn-validation {
+		@apply inline-flex items-center px-3.5 py-2 m-2 w-28 border h-8 border-transparent text-xs justify-center leading-4 font-medium rounded-full shadow-sm text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-900;
+		background-color: $blueCer;
+	}
+	// bouton négation couleur redCer
+	.btn-negation {
+		@apply inline-flex items-center px-3.5 py-2 m-2 w-28 border h-8 border-transparent text-xs justify-center leading-4 font-medium rounded-full shadow-sm text-white hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-900;
+		background-color: $redCer;
+	}
+	// bouton d'alert couleur yellowCer
+	.btn-alert {
+		@apply inline-flex items-center px-3.5 py-2 m-2 w-28 border h-8 border-transparent text-xs justify-center leading-4 font-medium rounded-full shadow-sm text-white hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-900;
+		background-color: $yellowCer;
+	}
+}
+
+:root {
+	/*font-family: Inter, Avenir, Helvetica, Arial, sans-serif;*/
+	font-size: 13px;
+	color-scheme: light dark;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	--tooltipX: 0;
+	--tooltipY: 0;
+	@apply bg-gray-100;
+}
+
+.burgerIcon {
+	cursor: pointer;
+}
+
+a {
+	font-weight: 500;
+	color: $blueCer;
+	text-decoration: inherit;
+}
+a:hover {
+	color: rgb(16, 109, 103);
+}
+
+body {
+	margin: 0;
+	display: flex;
+	min-width: 320px;
+	min-height: 100vh;
+	background-color: #f3f4f6;
+}
+
+input {
+	font-weight: 400 !important;
+}
+
+// Styles pour la table
+tbody {
+	border-bottom: 1px solid lightgray;
+}
+
+th {
+	border-bottom: 1px solid lightgray;
+	/* border-right: 1px solid lightgray; */
+	padding: 2px 4px;
+}
+td {
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+}
+tr {
+	border-bottom: 1px solid lightgray;
+}
+tr:hover {
+	cursor: pointer;
+}
+
+.tooltip {
+	position: absolute !important;
+	top: var(--tooltipY);
+	left: var(--tooltipX);
+}
+.cellBackground {
+	text-align: center !important;
+}
+
+.secondHeaderLeft {
+	border-left: 1px solid lightgray !important;
+}
+.secondHeaderRight {
+	border-right: 1px solid lightgray !important;
+}
+.mainHeader {
+	@extend th, .secondHeaderRight;
+	@extend th, .secondHeaderLeft;
+	border-top: 1px solid lightgray !important;
+}
+.badge {
+	font-weight: 600;
+	font-size: smaller;
+	color: white;
+	border-radius: 5px;
+	padding: 2px 5px;
+}
+.badgeVert {
+	@extend .badge;
+	background-color: $blueCer;
+}
+.badgeJaune {
+	@extend .badge;
+	background-color: $yellow;
+	color: $greyCer;
+}
+.badgeRouge {
+	@extend .badge;
+	background-color: $redCer;
+}
+.badgeOrange {
+	@extend .badge;
+	background-color: $yellowCer;
+}
+
+// loader table
+.loader {
+	border-top-color: #3498db;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.App {
+	text-align: left;
+}
+
+#root {
+	margin: 0 auto;
+	text-align: center;
+	height: 100vh;
+	@apply w-full;
+	@apply absolute;
+}
+
+.logo {
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+}
+.logo:hover {
+	filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+	filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
+}
+
+.card {
+	padding: 2em;
+}
+
+.read-the-docs {
+	color: #888;
+}
+
+// #### COLORS #### //
+
+.text-gris-cer {
+	color: $greyCer;
+}
+
+.yellowCer {
+	background-color: $yellowCer;
+}
+
+.redCer {
+	background-color: $redCer;
+}
+
+.blueCer {
+	background-color: $blueCer;
+	color: white;
+}
+
+.greyCer {
+	background-color: $greyCer;
+}
+
+.greyCer-text {
+	color: $greyCer;
+}

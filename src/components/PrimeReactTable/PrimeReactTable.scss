@@ -1,0 +1,42 @@
+// PrimeReactTable.scss
+.p-datatable-header {
+    background-color: #F0EFEF;
+    .p-datatable-globalfilter-container {
+        margin-right: 1rem;
+    }
+    .p-datatable-columns {
+        display: flex;
+        align-items: center;
+        .p-datatable-columns-dropdown {
+        margin-right: 1rem;
+        }
+    }
+    .p-datatable-export {
+        display: flex;
+        align-items: center;
+        .p-datatable-export-icon {
+        margin-right: 0.5rem;
+        }
+    }
+}
+
+.p-datatable-thead > tr > th {
+    background-color: #F0EFEF;
+    border: none
+}
+
+.table-header {
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        margin-right: 10px;
+    }
+}
+
+// hover on table row
+tbody > tr:hover {
+    background-color: rgba(24, 160, 150, 0.1);
+}

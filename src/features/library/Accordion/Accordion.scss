@@ -1,0 +1,71 @@
+// .accordion {
+//     .accordion-title {
+//         cursor: pointer;
+//         width: 100%;
+//         padding: 1rem;
+//         background-color: #feffff;
+//         border-top-left-radius: 5px;
+//         border-top-right-radius: 5px;
+//         // shadow sur le dessus de la boite seulement
+//         box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.2);
+//         // bottom border noir
+//         border-bottom: 1px solid #424242;
+//     }
+
+//     .accordion-content {
+//         max-height: 0;
+//         overflow: hidden;
+//         transition: max-height 0.3s ease;
+        
+//         &.open {
+//             max-height: 1200px; // Ajustez selon votre contenu
+//         }
+//     }
+// }
+
+
+.accordion {
+    .accordion-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        color: white;
+        width: 100%;
+        padding: 1rem;
+        background-color: rgb(24, 160, 150);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid #424242;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2rem;
+
+
+        .accordion-icon {
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+            margin-left: 5px;
+        }
+
+        .accordion-icon.open {
+
+            transform: rotate(-135deg);
+        }
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        
+        &.open {
+            max-height: 1200px; 
+        }
+    }
+}

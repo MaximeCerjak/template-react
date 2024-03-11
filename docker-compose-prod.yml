@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: [CONTAINER_NAME]
+    image: [IMAGE_REACT_VITE]
+    build:
+      context: .
+    ports:
+      # TODO remplacer le port par le définitif
+      - 8080:80
+
